@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
- <script src="script.js"></script>
- <script src="question.js"> </script>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <link href="https://fonts.googleapis.com/css?family=Calistoga|Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h2 id ="test_status"></h2>
-    <div id ="test">Hello</div>
-<button id= "start" onClick= "renderQuestion();">Start Quiz</button>    
+  <nav class="navbar sticky-top navbar-light bg-light shadow">
+    <a class="navbar-brand" href="#">Code Quiz</a>
+  </nav>
+
+  <div id="container" class="container">
+
+    <div class="row m-3">
+      <div class="col m-3">
+        <p id="instructions" class="instructions"><br>Coding Quiz
+        </p>
+      </div>
+    </div>
+    <button id="start" class="start btn-lg btn-block">Start Quiz!</button>
+    <div id="quiz" style="display: none">
+      <div class="row">
+        <div id="question" class="question"></div>
+      </div>
+      <div id="choices" class="choice-grid">
+        <div class="row">
+          <div class="btn btn-dark choice" id="A" onclick="checkAnswer('A')"></div>
+          <div class="btn btn-dark choice" id="B" onclick="checkAnswer('B')"></div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="btn btn-dark choice" id="C" onclick="checkAnswer('C')"></div>
+          <div class="btn btn-dark choice" id="D" onclick="checkAnswer('D')"></div>
+        </div>
+      </div>
+      <div id="timer" class="timer">
+        <div id="counter" class="counter"></div>
+        <div id="btimeGauge" class="btimeGauge"></div>
+        <div id="timeGauge" class="timeGauge"></div>
+      </div>
+      <div id="progress" class="progress"></div>
+    </div>
+    <div id="scoreContainer" class="scoreContainer" style="display: none"></div>
+  </div>
+
+  <script src="script.js"></script>
+
 </body>
+
 </html>
-  
-  
